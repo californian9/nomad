@@ -9,19 +9,44 @@
     <title>soo-jung's world</title>
 </head>
 
-<body>
-<!-- 실시간 시계
-    로컬 스토리지를 사용한 로그인
-    로컬 스토리지를 사용한 투두리스트
-    랜덤 배경 이미지
-    날씨와 위치 (geolocation) -->
-
-<main>
-    <div>
-
+<body class="is-preload">
+    <div id="wrapper">
+    <!-- 실시간 시계 o
+        로컬 스토리지를 사용한 로그인 o
+        로컬 스토리지를 사용한 투두리스트 o
+        랜덤 배경 이미지 o
+        날씨와 위치 (geolocation) o -->
+        <main>
+            <div>
+                <h1 id="clock">00:00:00</h1>
+                <span id="greeting" class="hidden"></span>
+                <form id="loginForm" class="hidden">
+                    <input id="loginInput" type="text" placeholder="이름을 적어주세요" maxlength="10" autofocus required>
+                </form>
+            </div>
+            <div id="toDoDiv">
+                <article id="todo-article">
+                    <h2 class="major">To-do List</h2>
+                    <ul id="toDoList" class="hidden"></ul>
+                    <form id="toDoForm" class="hidden">
+                        <input type="text" placeholder="할 일을 입력하세요" autofocus required>
+                    </form>
+                </article>
+            </div>
+            <div id="weather">
+                <ul>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                </ul>
+            </div>
+        </main>
     </div>
-</main>
 
+    <script src="js/greetings.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/todo.js"></script>
 </body>
 
 </html>
